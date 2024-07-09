@@ -139,6 +139,8 @@ class OrderSource(Base):
     def to_dict(self):
         """
         Convert SQLAlchemy model instance to a dictionary
+        Model Methods:
+        Custom Methods: SQLAlchemy models can define custom methods for encapsulating business logic, similar to Django models.
         """
         return {column.name: getattr(self, column.name) for column in self.__table__.columns}
 
